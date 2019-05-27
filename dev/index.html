@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script src="../dist/cloud-sdk.umd.js"></script>
+  </body>
+</html>
+<script>
+  (async () => {
+    // setup
+    cloud.setup({
+      baseUrl: "http://localhost:1337",
+      transport: "socket", // this does nothing at all
+    });
+    // usage
+    var product = await cloud("deleteProduct", { id: 12344 });
+    console.log(product);
+  })();
+</script>
+
+<!-- var user = cloud("addToCart");
+console.log(user); -->
